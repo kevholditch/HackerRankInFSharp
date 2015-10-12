@@ -55,9 +55,10 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Lib.fs" />
     <Compile Include="GridSearch.fs" />
     <Compile Include="Program.fs" />
-    <Content Include="TextFile1.txt">
+    <Content Include="GridSearch.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
