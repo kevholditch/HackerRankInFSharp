@@ -20,7 +20,7 @@ module find =
 
     [<Test>]
     let ``the string '123' is in the grid '444123 981231 123122' at [(0,1)]``() =
-        find ["444123"; "981231"; "123122"] "123" 0 |> should equal [(3,0); (2,1); (0, 2)]
+        find ["444123"; "981231"; "123122"] "123" 0 |> should equal [(3,0); (2,1); (0,2)]
 
     [<Test>]
     let ``the string '123' is not in the grid '123 777 444' when the first row is skipped ``() =
