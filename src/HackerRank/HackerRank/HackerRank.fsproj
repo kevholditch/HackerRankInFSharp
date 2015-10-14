@@ -56,6 +56,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <Compile Include="GridSearch.fs" />
+    <Compile Include="ManasaAndStones.fs" />
     <Compile Include="Program.fs" />
     <Content Include="GridSearch.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -54,9 +54,10 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GridSearchTests.fs" />
+    <Compile Include="ManasaAndStonesTests.fs" />
     <None Include="packages.config" />
     <None Include="app.config" />
+    <Compile Include="GridSearchTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HackerRank\HackerRank.fsproj">

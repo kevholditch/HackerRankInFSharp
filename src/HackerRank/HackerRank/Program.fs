@@ -11,6 +11,7 @@ open System.IO
 
     //GridSearch.solution
 
+    //let a = ManasaAndStones.combinations [2; 3] 4 |> Seq.toList
 
     Console.ReadLine()
     0 // return an integer exit code
