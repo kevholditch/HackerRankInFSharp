@@ -35,16 +35,9 @@ let solution =
     let reader = new StreamReader("ManasaAndStones.txt")
     let read = reader.ReadLine
 
-    let getNumber =  fun _ -> read() |> Convert.ToInt32
-    let t = getNumber()
+    let getNum =  fun _ -> read() |> Convert.ToInt32
     
-    let answers = [1..t] |> Seq.map(fun x -> findMansaNumbers (getNumber()) (getNumber()) (getNumber())) |> Seq.toList
-                     
-                     
-    let print b = match b with
-                    | true -> Console.WriteLine("YES")
-                    | false -> Console.WriteLine("NO")                 
-                    
-    answers |> Seq.map(fun a -> printfn "%s" a ) |> Seq.toList
-                       
+    [for _ in 1..getNum() do findMansaNumbers (getNum()) (getNum()) (getNum()) |> fun str -> printfn "%s" str]
+
+                                                  
     reader.Close()
