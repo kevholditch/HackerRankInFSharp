@@ -10,8 +10,7 @@ open System.IO
     let main argv = 
 
     //GridSearch.solution
-
-    //let a = ManasaAndStones.combinations [2; 3] 4 |> Seq.toList
-
+    ManasaAndStones.solution
+    
     Console.ReadLine()
     0 // return an integer exit code
