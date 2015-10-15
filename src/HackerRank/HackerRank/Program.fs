@@ -10,7 +10,7 @@ open System.IO
     let main argv = 
 
     //GridSearch.solution
-    ManasaAndStones.solution
+    ManasaAndStones.slowsolution
     
     Console.ReadLine()
     0 // return an integer exit code

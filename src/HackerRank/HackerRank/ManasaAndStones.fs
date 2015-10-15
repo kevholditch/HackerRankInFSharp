@@ -31,7 +31,7 @@ let findMansaNumbers steps (stone1:int) (stone2:int) =
                                             |> Seq.sort
                                             |> fun x -> String.Join(" ", x)
 
-let solution =
+let slowsolution =
     let reader = new StreamReader("ManasaAndStones.txt")
     let read = reader.ReadLine
 
