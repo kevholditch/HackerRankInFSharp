@@ -3,14 +3,7 @@ module ManasaAndStones
 
 open System
 
-let power x y =
-    let rec inner a b =
-        match (a, b) with
-        | (a, 0) -> a
-        | (a, b) -> inner (a*x) (b-1)
-    inner x (y-1)
-
-let combinations list length =
+let combinationsold list length =
     let rec solve letters len =     
         seq {
             if len = 1 then 
@@ -23,6 +16,10 @@ let combinations list length =
         }
     solve list length
 
-
-
-    
+let combinations list length =
+    let rec solve lst len =
+        match len with
+        | 1 -> lst |> Seq.map(fun x -> [x])
+        | i -> lst |> Seq.map(fun l -> solve lst (len-1) |> Seq.map(fun r -> l::r)) 
+                            |> Seq.collect(fun x -> x) 
+    solve list length
