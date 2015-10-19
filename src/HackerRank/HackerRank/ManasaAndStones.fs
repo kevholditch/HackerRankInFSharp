@@ -31,6 +31,15 @@ let findMansaNumbers steps (stone1:int) (stone2:int) =
                                             |> Seq.sort
                                             |> fun x -> String.Join(" ", x)
 
+
+let findNumbers steps (stone1:int) (stone2:int) =
+    let list1 = [0..steps-1]
+    let list2 = [0..steps-1] |> List.rev
+    List.zip list1 list2 |> Seq.map(fun (x, y) -> (x*stone1)+(y*stone2))
+                         |> Seq.distinct
+                         |> Seq.sort
+                         |> fun x -> String.Join(" ", x)
+
 let slowsolution =
     let reader = new StreamReader("ManasaAndStones.txt")
     let read = reader.ReadLine
@@ -38,6 +47,17 @@ let slowsolution =
     let getNum =  fun _ -> read() |> Convert.ToInt32
     
     [for _ in 1..getNum() do findMansaNumbers (getNum()) (getNum()) (getNum()) |> fun str -> printfn "%s" str]
+
+                                                  
+    reader.Close()
+
+
+let solution = 
+    let reader = new StreamReader("ManasaAndStones.txt")
+    let read = reader.ReadLine
+    let getNum =  fun _ -> read() |> Convert.ToInt32
+    
+    [for _ in 1..getNum() do findNumbers (getNum()) (getNum()) (getNum()) |> fun str -> printfn "%s" (str.ToString())]
 
                                                   
     reader.Close()
